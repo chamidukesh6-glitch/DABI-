@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+/* Background Video */
+.bg-video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Glass UI */
+.glass {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  width: 85%;
+  margin: auto;
+  box-shadow: 0 0 30px rgba(0, 0, 255, 0.3);
+}
+
+/* Container */
+.container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* Title */
+h1 {
+  font-size: 32px;
+  text-shadow: 0 0 15px cyan;
+}
+
+/* Input */
+input {
+  width: 85%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Neon Buttons */
+.button {
+  display: block;
+  width: 85%;
+  margin: 12px auto;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(45deg, #000, #001f4d, #0033cc);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 0 10px blue;
+  transition: 0.3s;
+}
+
+.button:hover {
+  box-shadow: 0 0 25px cyan, 0 0 50px blue;
+  transform: scale(1.07);
+}
+
+/* Sound Button */
+.sound-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: black;
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 10px cyan;
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 55px;
+  height: 55px;
+  border: 6px solid white;
+  border-top: 6px solid cyan;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  input, .button {
+    width: 95%;
+  }
+}
